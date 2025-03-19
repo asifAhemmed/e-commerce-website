@@ -27,9 +27,9 @@ const Header = () => {
                       <dialog open={isOpen}>
                         <div>
                             {user.role === "admin" && (
-                                <Link to="/admin/dashboard">Admin</Link>
+                                <Link onClick={() => setIsOpen(false)} to="/admin/dashboard">Admin</Link>
                             )}
-                            <Link to="/orders">Orders</Link>
+                            <Link onClick={() => setIsOpen(false)} to="/orders">Orders</Link>
                             <button onClick={logOutHandler}>
                                 <FaSignOutAlt/>
                             </button>
